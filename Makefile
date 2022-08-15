@@ -1,5 +1,10 @@
+DEST=_site
 
-all: index.html
+all: $(DEST)/index.html
 
-index.html: README.md template.html
-	pandoc $< --template template.html --metadata title="Tetris on Edge TX" -o $@
+_site/index.html: README.md template.html metadata.yml
+	mkdir -p $(DEST)
+	pandoc -s $< -c mvp.css --metadata-file=metadata.yml --template template.html -o $@
+	cp *.jpg $(DEST)
+	cp *.css $(DEST)
+	cp *.lua $(DEST)

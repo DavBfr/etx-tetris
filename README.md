@@ -1,5 +1,3 @@
-# Tetris on Edge TX
-
 ![](snapshot_01.jpg)
 
 ![](snapshot_02.jpg)
