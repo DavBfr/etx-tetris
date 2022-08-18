@@ -4,7 +4,7 @@
 
 ## Installation
 
-- Download the script here: [tetris.lua](tetris.lua)
+- Download the script here: [tetris.lua](https://davbfr.github.io/etx-tetris/tetris.lua)
 - Copy the script on your SDCARD: `/SCRIPTS/TOOLS/`.
 
 ## How to Play

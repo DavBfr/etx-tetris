@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      "esnext"
+    ],
+    "moduleResolution": "node",
+    "types": [
+      "lua-types/5.2",
+      "typescript-to-lua/language-extensions"
+    ],
+    "strict": true
+  },
+  "exclude": [
+    "plugins/*"
+  ],
+  "tstl": {
+    "luaTarget": "5.2",
+    "luaLibImport": "inline",
+    "noHeader": true,
+    "noImplicitSelf": true,
+    "luaPlugins": [
+      { "name": "./plugins/minify.ts" },
+    ],
+  },
+}

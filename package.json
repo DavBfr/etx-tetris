@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "tstl",
+    "dev": "tstl --watch"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 4,
+    "proseWrap": "never",
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "lua-types": "^2.11.0",
+    "luamin": "^1.0.4",
+    "typescript-to-lua": "^1.6.3"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
