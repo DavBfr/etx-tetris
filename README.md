@@ -1,6 +1,6 @@
-![](snapshot_01.jpg)
+![](https://davbfr.github.io/etx-tetris/snapshot_01.jpg)
 
-![](snapshot_02.jpg)
+![](https://davbfr.github.io/etx-tetris/snapshot_02.jpg)
 
 ## Installation
 
