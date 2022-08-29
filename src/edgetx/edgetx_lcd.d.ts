@@ -39,6 +39,7 @@ declare module lcd {
 declare module Bitmap {
   function open(name: string): Bitmap
   function getSize(bitmap: Bitmap): LuaMultiReturn<[number, number]>
+  function resize(bitmap: Bitmap, width: number, height: number): Bitmap|null
   function toMask(bitmap: Bitmap): string
 }
 

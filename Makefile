@@ -27,6 +27,10 @@ lua: deps
 	cp assets/mask_timer_bg.png $(DEST)/WIDGETS/Timer/
 	mkdir -p $(DEST)/WIDGETS/Gauge
 	mv -f gauge.lua $(DEST)/WIDGETS/Gauge/main.lua
+	mkdir -p $(DEST)/WIDGETS/ModelBmp
+	mv -f modelbmp.lua $(DEST)/WIDGETS/ModelBmp/main.lua
+	mkdir -p $(DEST)/WIDGETS/Text
+	mv -f text.lua $(DEST)/WIDGETS/Text/main.lua
 
 dev:
 	find src/ | entr make lua
