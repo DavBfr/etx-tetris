@@ -252,6 +252,10 @@ declare const WARNING_COLOR: number
 declare const WHITE: number
 declare const XXLSIZE: number
 declare const YELLOW: number
+declare const TIMER: number
+declare const MAX_OUTPUT_CHANNELS: number
+declare const LIMIT_EXT_PERCENT: number
+declare const LIMIT_STD_PERCENT: number
 
 
 
@@ -311,6 +315,7 @@ declare function sources(): void
 declare function sportTelemetryPop(): void
 declare function sportTelemetryPush(): void
 declare function switches(): void
+declare function getOutputValue(index: number): number
 
 
 interface TFieldInfo {

@@ -61,6 +61,7 @@ declare interface Timer {
   minuteBeep?: boolean
   persistent?: number
   name?: string
+  showElapsed?: boolean
 }
 
 

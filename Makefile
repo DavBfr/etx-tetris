@@ -1,6 +1,6 @@
-DEST=_site
+DEST?=_site
 
-all: $(DEST)/tetris.lua $(DEST)/index.html
+all: lua $(DEST)/index.html
 
 _site/index.html: README.md template/template.html template/metadata.yml
 	mkdir -p $(DEST)
@@ -12,13 +12,22 @@ deps: node_modules/.bin/tstl
 node_modules/.bin/tstl: package.json
 	npm i
 
-$(DEST)/tetris.lua: src/tetris.ts deps
+lua: deps
 	node_modules/.bin/tstl
-	mkdir -p $(DEST)
-	mv -f *.lua $(DEST)
+	mkdir -p $(DEST)/SCRIPTS/TOOLS
+	mv -f tetris.lua $(DEST)/SCRIPTS/TOOLS/Tetris.lua
+	mkdir -p $(DEST)/WIDGETS/Tetris
+	cp -f src/tetris-widget.lua $(DEST)/WIDGETS/Tetris/main.lua
+	mkdir -p $(DEST)/WIDGETS/Outputs
+	mv -f outputs.lua $(DEST)/WIDGETS/Outputs/main.lua
+	mkdir -p $(DEST)/WIDGETS/Timer
+	mv -f timer.lua $(DEST)/WIDGETS/Timer/main.lua
+	cp assets/mask_rscale.png $(DEST)/WIDGETS/Timer/
+	cp assets/mask_timer.png $(DEST)/WIDGETS/Timer/
+	cp assets/mask_timer_bg.png $(DEST)/WIDGETS/Timer/
 
-dev: deps
-	node_modules/.bin/tstl --watch
+dev:
+	find src/ | entr make lua
 
 clean:
 	rm -f package-lock.json

@@ -11,13 +11,15 @@ declare module lcd {
   function drawText(x: number, y: number, text: string, flags?: number, inversColor?: number): void
   function drawTextLines(): void
   function sizeText(text: string, flags?: number): LuaMultiReturn<[number, number]>
-  function drawTimer(): void
+  function drawTimer(x: number, y: number, value: number, flags?: number, inversColor?: number): void
   function drawNumber(x: number, y: number, value: number, flags?: number, inversColor?: number): void
   function drawChannel(): void
   function drawSwitch(): void
   function drawSource(x: number, y: number, source: number, flags?: number): void
   function drawGauge(): void
   function drawBitmap(bitmap: Bitmap, x: number, y: number, scale?: number): void
+  function drawBitmapPattern(bitmap: string, x: number, y: number, flags?: number): void
+  function drawBitmapPatternPie(bitmap: string, x: number, y: number, startAngle: number, endAngle: number, flags?: number): void
   function setColor(colorIndex: number, color: number): void
   function getColor(): void
   function RGB(r: number, g: number, b: number): number
@@ -36,6 +38,7 @@ declare module lcd {
 declare module Bitmap {
   function open(name: string): Bitmap
   function getSize(bitmap: Bitmap): LuaMultiReturn<[number, number]>
+  function toMask(bitmap: Bitmap): string
 }
 
 interface Bitmap { }

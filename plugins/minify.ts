@@ -16,7 +16,7 @@ const plugin: tstl.Plugin = {
     result: tstl.ProcessedFile[],
   ) {
     for (const file of result) {
-      file.code = "-- TETRIS, David PHAM-VAN\n" + luamin.minify(file.code)
+      file.code = "-- David PHAM-VAN\n" + luamin.minify(file.code)
     }
   },
 };
