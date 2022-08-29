@@ -8,6 +8,7 @@ declare module lcd {
   function drawLine(x1: number, y1: number, x2: number, y2: number, pattern: number, flags?: number): void
   function drawRectangle(x: number, y: number, w: number, h: number, flags?: number, thickness?: number): void
   function drawFilledRectangle(x: number, y: number, w: number, h: number, flags?: number, opacity?: number): void
+  function invertRect(x: number, y: number, w: number, h: number, flags?: number): void
   function drawText(x: number, y: number, text: string, flags?: number, inversColor?: number): void
   function drawTextLines(): void
   function sizeText(text: string, flags?: number): LuaMultiReturn<[number, number]>

@@ -25,6 +25,8 @@ lua: deps
 	cp assets/mask_rscale.png $(DEST)/WIDGETS/Timer/
 	cp assets/mask_timer.png $(DEST)/WIDGETS/Timer/
 	cp assets/mask_timer_bg.png $(DEST)/WIDGETS/Timer/
+	mkdir -p $(DEST)/WIDGETS/Gauge
+	mv -f gauge.lua $(DEST)/WIDGETS/Gauge/main.lua
 
 dev:
 	find src/ | entr make lua
