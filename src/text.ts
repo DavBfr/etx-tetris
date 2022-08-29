@@ -1,4 +1,4 @@
-const name = "Text1"
+const name = "Text"
 
 const options: any[] = [
   ["Text", STRING, "My Label"],

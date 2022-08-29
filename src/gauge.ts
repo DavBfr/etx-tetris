@@ -1,4 +1,4 @@
-const name = "Gauge1"
+const name = "Gauge"
 
 const options: any[] = [
   ["Source", SOURCE, 1],
